@@ -17,4 +17,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+    Button buttonB= findViewById(R.id.add);
+    Button buttonA = findViewById(R.id.borrow);
+    buttonA.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            // Code here executes on main thread after user presses button
+        }
+    });
 }
