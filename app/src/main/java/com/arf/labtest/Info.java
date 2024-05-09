@@ -1,6 +1,6 @@
 package com.arf.labtest;
 
-public abstract class Info {
+public  class Info {
     private int units;
     private String genre_name;
     public Info(int units, String genre_name) {

@@ -24,7 +24,9 @@ public class Book {
         this.title = title;
     }
     public String addBook(String title, String author,int units, String genre_name) {
-        return "Book added";
+        Info x=new Info(units,genre_name);
+        Book y=new Book(title,author);
+        return y.getTitle()+"by"+y.getAuthor()+"is added";
     }
     public String borrowBook(String title,int units) {
         return "Book borrowed";
