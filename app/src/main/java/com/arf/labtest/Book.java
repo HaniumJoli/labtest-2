@@ -27,8 +27,43 @@ public class Book {
         Info x=new Info(units,genre_name);
         Book y=new Book(title,author);
         return y.getTitle()+"by"+y.getAuthor()+"is added";
+        switch(genre_name) {
+            case "Fantasy":
+                Genre.Fantasy.add(y);
+                break;
+            case "Mystry":
+                Genre.Mystry.add(y);
+                break;
+            case "Thriller":
+                Genre.Thriller.add(y);
+                break;
+        }
+
     }
-    public String borrowBook(String title,int units) {
-        return "Book borrowed";
+    public String borrowBook(String title,int units){
+        switch(title) {
+            case "Fantasy":
+                if(Genre.Fantasy.size()>=units) {
+                    return "Book is available";
+                }
+                else {
+                    return "Book is not available";
+                }
+            case "Mystry":
+                if(Genre.Mystry.size()>=units) {
+                    return "Book is available";
+                }
+                else {
+                    return "Book is not available";
+                }
+            case "Thriller":
+                if(Genre.Thriller.size()>=units) {
+                    return "Book is available";
+                }
+                else {
+                    return "Book is not available";
+                }
+        }
+
     }
 }
